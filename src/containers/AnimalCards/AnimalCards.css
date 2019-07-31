@@ -13,3 +13,12 @@
 .animal-pic {
     width: 100%;
 }
+
+.animal-card p,
+.animal-card h2 {
+    margin-left: 7px;
+}
+
+.animal-species {
+    font-style: italic;
+}
