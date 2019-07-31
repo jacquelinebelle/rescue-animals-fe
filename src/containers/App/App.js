@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { thunkAnimals } from '../../thunks/fetchAnimals';
 import { thunkDonations } from '../../thunks/fetchDonations';
 import AnimalCards from '../AnimalCards';
-import Donations from '../Donations';
+import Donations from '../DonationList';
 import DonationForm from '../DonationForm';
 import './App.css';
 

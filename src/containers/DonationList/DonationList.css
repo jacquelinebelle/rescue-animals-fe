@@ -1,0 +1,14 @@
+.donation-heading {
+    margin: 6px;
+    text-align: center;
+}
+
+.donation-list {
+    list-style: none;
+    margin-left: -35px;
+    width: 250px;
+}
+
+.donation-card {
+    border: solid 1px black;
+}
