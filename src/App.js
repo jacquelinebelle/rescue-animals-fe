@@ -4,6 +4,7 @@ import { thunkAnimals } from './thunks/fetchAnimals';
 import { thunkDonations } from './thunks/fetchDonations';
 import AnimalCards from './containers/AnimalCards';
 import Donations from './containers/Donations';
+import DonationForm from './containers/DonationForm';
 import './App.css';
 
 export class App extends Component {
@@ -15,8 +16,9 @@ export class App extends Component {
   render() {
     return (
       <div>
-        {this.props.loading && <p>please wait while animal data is loading!</p>}
-        {this.props.error && <p>there has been an error retrieving animal data. i'm so sorry.</p>}
+        {this.props.loading && <p>please wait while data is loading!</p>}
+        {this.props.error && <p>there has been an error retrieving data. i'm so sorry.</p>}
+        <DonationForm />
         <AnimalCards />
         <Donations />
       </div>
