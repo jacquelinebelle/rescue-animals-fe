@@ -1,4 +1,4 @@
-import { setDonations } from '../actions';
+import { setDonations, isLoading, gotError } from '../actions';
 
 export const fetchDonations = async () => {
     try {
@@ -17,9 +17,9 @@ export const thunkDonations = () => {
     return async (dispatch) => {
       try {
         dispatch(isLoading(true));
-        const animals = await fetchAnimals();
+        const donations = await fetchDonations();
         dispatch(isLoading(false));
-        dispatch(setAnimals(animals));
+        dispatch(setDonations(donations));
       } catch (error) {
         dispatch(gotError(error.message));
       }

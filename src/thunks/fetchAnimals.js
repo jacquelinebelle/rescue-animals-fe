@@ -15,13 +15,13 @@ export const fetchAnimals = async () => {
 }
 
 
-export const thunkDonations = () => {
+export const thunkAnimals = () => {
     return async (dispatch) => {
       try {
         dispatch(isLoading(true));
-        const donations = await fetchDonations();
+        const animals = await fetchAnimals();
         dispatch(isLoading(false));
-        dispatch(setDonations(donations));
+        dispatch(setAnimals(animals));
       } catch (error) {
         dispatch(gotError(error.message));
       }

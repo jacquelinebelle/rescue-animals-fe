@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { thunkAnimals } from './thunks/fetchAnimals';
+import { thunkDonations } from './thunks/fetchDonations';
 import AnimalCards from './components/AnimalCards';
 import './App.css';
 
 export class App extends Component {
   componentDidMount = async () => {
-    // const { setAnimals, isLoading, gotError } = this.props;
-
-    // const animals = await thunkAnimals();
-    // setAnimals(animals);
     this.props.thunkAnimals();
+    this.props.thunkDonations();
   }
 
   render() {
@@ -25,11 +23,13 @@ export class App extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  animals: state.animals
+  animals: state.animals,
+  donations: state.donations
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  thunkAnimals: () => dispatch(thunkAnimals())
+  thunkAnimals: () => dispatch(thunkAnimals()),
+  thunkDonations: () => dispatch(thunkDonations())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
