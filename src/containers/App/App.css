@@ -1,4 +1,5 @@
 .App {
   display: grid;
+  font-family: 'Source Sans Pro';
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
