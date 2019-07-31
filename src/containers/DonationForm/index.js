@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { addDonation } from '../../actions';
 import './DonationForm.css';
 
 export class DonationForm extends Component {
@@ -9,7 +10,10 @@ export class DonationForm extends Component {
     }
 
     handleSubmit = (e) => {
-
+        e.preventDefault();
+        const name = this.state.name;
+        const donation = parseInt(this.state.donation);
+        this.props.addDonation(name, donation);
     }
 
     render() {
@@ -23,4 +27,9 @@ export class DonationForm extends Component {
     }
 }
 
-export default DonationForm;
+export const mapDispatchToProps = (dispatch) => ({
+    addDonation: (name, donation) => dispatch(addDonation(name, donation))
+  })
+  
+  export default connect(null, mapDispatchToProps)(DonationForm)
+  
