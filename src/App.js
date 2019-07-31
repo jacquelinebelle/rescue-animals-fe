@@ -18,13 +18,18 @@ export class App extends Component {
       <div>
         {this.props.loading && <p>please wait while animal data is loading!</p>}
         {this.props.error && <p>there has been an error retrieving animal data. i'm so sorry.</p>}
+        <AnimalCards animals={this.props.animals} />
       </div>
     )
   }
 }
 
+export const mapStateToProps = (state) => ({
+  animals: state.animals
+})
+
 export const mapDispatchToProps = (dispatch) => ({
   thunkAnimals: () => dispatch(thunkAnimals())
 })
 
-export default connect(null, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App)
