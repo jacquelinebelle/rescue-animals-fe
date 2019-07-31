@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { thunkAnimals } from './thunks/fetchAnimals';
 import { thunkDonations } from './thunks/fetchDonations';
-import AnimalCards from './components/AnimalCards';
+import AnimalCards from './containers/AnimalCards';
 import './App.css';
 
 export class App extends Component {
