@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './Donations.css';
 
-export const Donations = ({ donations }) => {
+export class Donations extends Component {
 
+    render() {
+        return (
+            <ul>
+                
+            </ul>
+        )
+    }
 }
 
-export default Donations;
+export const mapStateToProps = (state) => ({
+    donations: state.donations
+  })
+  
+  
+export default connect(mapStateToProps)(Donations)
