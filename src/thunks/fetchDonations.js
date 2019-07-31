@@ -12,3 +12,16 @@ export const fetchDonations = async () => {
         throw new Error(error.message);
     }
 }
+
+export const thunkDonations = () => {
+    return async (dispatch) => {
+      try {
+        dispatch(isLoading(true));
+        const animals = await fetchAnimals();
+        dispatch(isLoading(false));
+        dispatch(setAnimals(animals));
+      } catch (error) {
+        dispatch(gotError(error.message));
+      }
+    }
+}
