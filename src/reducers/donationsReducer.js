@@ -3,7 +3,7 @@ export const donations = (state = [], action) => {
         case 'SET_DONATIONS':
             return action.donations;
         case 'ADD_DONATION':
-            return [...state, { id: Date.now(), name: action.name, donation: action.donation }];
+            return [...state, { id: action.id, name: action.name, donation: action.donation }];
         default:
             return state;
     }
