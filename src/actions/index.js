@@ -12,3 +12,8 @@ export const gotError = (message) => ({
     type: 'GOT_ERROR',
     message
 });
+
+export const setDonations = (donations) => ({
+    type: 'SET_DONATIONS',
+    donations
+})

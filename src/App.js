@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { thunkAnimals } from './api/fetchAnimals';
+import { thunkAnimals } from './thunks/fetchAnimals';
 import AnimalCards from './components/AnimalCards';
 import './App.css';
 
