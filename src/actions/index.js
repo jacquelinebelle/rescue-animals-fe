@@ -18,7 +18,8 @@ export const setDonations = (donations) => ({
     donations
 });
 
-export const addDonation = (donation) => ({
+export const addDonation = (name, donation) => ({
     type: 'ADD_DONATION',
+    name,
     donation
 });
