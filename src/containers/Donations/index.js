@@ -4,10 +4,16 @@ import './Donations.css';
 
 export class Donations extends Component {
 
+    displayDonations = () => {
+        return this.props.donations.map(donation => {
+            return <li>{donation.name} just donated {donation.donation}!</li>
+        })
+    }
+
     render() {
         return (
             <ul>
-                
+                {this.displayDonations()}
             </ul>
         )
     }
