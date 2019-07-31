@@ -1,3 +1,6 @@
+import { setAnimals, isLoading, gotError } from '../actions';
+
+
 export const fetchAnimals = async () => {
     try {
         const response = await fetch('http://localhost:3001/api/v1/rescue-animals');
@@ -10,3 +13,17 @@ export const fetchAnimals = async () => {
         throw new Error(error.message);
     }
 }
+
+
+export const thunkAnimals = () => {
+    return async (dispatch) => {
+      try {
+        dispatch(isLoading(true));
+        const animals = await fetchAnimals('http://localhost:3001/api/v1/rescue-animals');
+        dispatch(isLoading(false));
+        dispatch(setAnimals(animals));
+      } catch (error) {
+        dispatch(gotError(error.message));
+      }
+    }
+  }

@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchAnimals } from './api/fetchAnimals';
-import { setAnimals } from './actions';
+import { thunkAnimals } from './api/fetchAnimals';
+import { setAnimals, isLoading, gotError } from './actions';
 import './App.css';
 
 export class App extends Component {
   componentDidMount = async () => {
-    const animals = await fetchAnimals();
-    this.props.setAnimals(animals);
+    // const { setAnimals, isLoading, gotError } = this.props;
+
+    // const animals = await thunkAnimals();
+    // setAnimals(animals);
+    this.props.thunkAnimals();
   }
 
   render() {
@@ -20,7 +23,7 @@ export class App extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  setAnimals: animals => dispatch(setAnimals(animals))
+  thunkAnimals: () => dispatch(thunkAnimals())
 })
 
 export default connect(null, mapDispatchToProps)(App)

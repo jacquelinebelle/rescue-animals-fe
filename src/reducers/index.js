@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import { animals } from './animalsReducer';
+import { animals, loading, error } from './animalsReducer';
 
 const rootReducer = combineReducers({
-  animals
+  animals,
+  loading,
+  error
 });
 
 export default rootReducer;
