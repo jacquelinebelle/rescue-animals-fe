@@ -1,0 +1,14 @@
+.donation-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    width: 450px;
+}
+
+.submit-donation-btn {
+    background-color: rgba(0, 0, 255, .2);
+    border: none;
+    width: 456px;
+}

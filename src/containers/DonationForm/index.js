@@ -22,8 +22,8 @@ export class DonationForm extends Component {
     render() {
         return (
             <form className="donation-form">
-                <input className="name-input" name="name" type="text" onChange={this.handleChange} />
-                <input className="donation-input" name="donation" type="number" onChange={this.handleChange} />
+                <input className="name-input input" name="name" type="text" onChange={this.handleChange} />
+                <input className="donation-input input" name="donation" type="number" onChange={this.handleChange} />
                 <button className="submit-donation-btn" onClick={this.handleSubmit}>Donate!</button>
             </form>
         )
