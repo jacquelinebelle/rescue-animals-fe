@@ -3,7 +3,13 @@
     flex-direction: column;
 }
 
+.input,
+.submit-donation-btn {
+    height: 30px;
+}
+
 .input {
+    margin-bottom: 10px;
     width: 450px;
 }
 
