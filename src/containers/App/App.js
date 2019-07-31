@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { thunkAnimals } from './thunks/fetchAnimals';
-import { thunkDonations } from './thunks/fetchDonations';
-import AnimalCards from './containers/AnimalCards';
-import Donations from './containers/Donations';
-import DonationForm from './containers/DonationForm';
+import { thunkAnimals } from '../../thunks/fetchAnimals';
+import { thunkDonations } from '../../thunks/fetchDonations';
+import AnimalCards from '../AnimalCards';
+import Donations from '../DonationList';
+import DonationForm from '../DonationForm';
 import './App.css';
 
 export class App extends Component {
@@ -15,10 +15,13 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
-        {this.props.loading && <p>please wait while data is loading!</p>}
-        {this.props.error && <p>there has been an error retrieving data. i'm so sorry.</p>}
+      <div className="App">
+        <header>
+          <h1>Animal Rescue</h1>
         <DonationForm />
+        </header>
+        {this.props.loading && <p>Please wait while data is loading!</p>}
+        {this.props.error && <p>There has been an error retrieving data.</p>}
         <AnimalCards />
         <Donations />
       </div>

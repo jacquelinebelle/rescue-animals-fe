@@ -1,0 +1,22 @@
+.donation-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input,
+.submit-donation-btn {
+    height: 30px;
+}
+
+.input {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    width: 450px;
+}
+
+.submit-donation-btn {
+    background-color: rgba(0, 0, 255, .2);
+    border: none;
+    cursor: pointer;
+    width: 464px;
+}

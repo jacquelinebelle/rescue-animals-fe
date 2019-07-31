@@ -1,0 +1,22 @@
+.donation-heading {
+    margin: 6px;
+    text-align: center;
+}
+
+.donation-list {
+    border: double 5px rgba(0, 0, 255, .2);
+    list-style: none;
+    padding: 0;
+    margin-left: 5px;
+    width: 230px;
+}
+
+.donation-card {
+    padding: 10px;
+    margin: 5px;
+}
+
+.donation-card:hover {
+    box-shadow: 2px 2px 9px 9px rgba(253, 247, 191, 1);
+}
+

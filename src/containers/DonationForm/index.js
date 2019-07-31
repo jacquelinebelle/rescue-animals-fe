@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addDonation } from '../../actions';
-import { postDonations } from '../../api/postDonations';
+import { postDonations } from '../../api/fetchDonations';
 import './DonationForm.css';
 
 export class DonationForm extends Component {
@@ -22,8 +22,8 @@ export class DonationForm extends Component {
     render() {
         return (
             <form className="donation-form">
-                <input className="name-input" name="name" type="text" onChange={this.handleChange} />
-                <input className="donation-input" name="donation" type="number" onChange={this.handleChange} />
+                <input className="name-input input" name="name" type="text" placeholder="Enter name" onChange={this.handleChange} />
+                <input className="donation-input input" name="donation" type="number" placeholder="Enter donation amount" onChange={this.handleChange} />
                 <button className="submit-donation-btn" onClick={this.handleSubmit}>Donate!</button>
             </form>
         )

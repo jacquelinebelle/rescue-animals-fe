@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './Donations.css';
+import './DonationList.css';
 
 export class Donations extends Component {
 
     displayDonations = () => {
         return this.props.donations.map(donation => {
-            return <li>{donation.name} just donated {donation.donation}!</li>
+            return <li className="donation-card">{donation.name} just donated {donation.donation}!</li>
         })
     }
 
     render() {
         return (
-            <ul>
-                {this.displayDonations()}
-            </ul>
+            <aside>
+                <h2 className="donation-heading">Recent Donations</h2>
+                <ul className="donation-list">
+                    {this.displayDonations()}
+                </ul>
+            </aside>
         )
     }
 }

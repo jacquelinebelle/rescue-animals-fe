@@ -1,0 +1,13 @@
+.App {
+  display: grid;
+  font-family: 'Source Sans Pro';
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+header {
+  padding: 10px 30px;
+}
+
+h1 {
+  margin-left: 5px;
+}
