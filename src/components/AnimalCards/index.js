@@ -12,7 +12,7 @@ export const AnimalCards = ({ animals }) => {
     });
 
     return (
-        <main>
+        <main className="gallery">
             {displayAnimals()}
         </main>
     )
